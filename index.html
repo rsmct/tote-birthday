@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Happy Birthday Tote ♡</title>
+<meta name="theme-color" content="#ffd6e8">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎀</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--pink:#ff8fb8;--hot:#ff5c9d;--blush:#ffe3ef;--lav:#cdb4ff;--mist:#f4ecff;--ink:#5b2a48;--card:#ffffffcc;
+--bt:max(12px,env(safe-area-inset-bottom,0px))}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth;scroll-padding-top:12px}
+body{margin:0;font-family:Fredoka,system-ui,sans-serif;color:var(--ink);background:linear-gradient(160deg,#ffe3ef,#f4ecff 50%,#ffd9ec);background-attachment:fixed;overflow-x:hidden;padding-bottom:84px}
+button{font:inherit;cursor:pointer;border:0;color:inherit}
+.btn{background:linear-gradient(135deg,var(--hot),#ff8fb8);color:#fff;padding:14px 26px;border-radius:99px;font-weight:600;font-size:1.05rem;box-shadow:0 6px 0 #d63d7f,0 10px 20px #ff5c9d55;transition:transform .15s}
+.btn:active{transform:translateY(4px);box-shadow:0 2px 0 #d63d7f}
+.btn.soft{background:#fff;color:var(--hot);box-shadow:0 5px 0 #ffc2da}
+.btn.sm{padding:9px 16px;font-size:.9rem}
+section{padding:72px 18px 48px;max-width:760px;margin:auto;position:relative}
+h2{font-family:Caveat,cursive;font-size:clamp(2.4rem,9vw,3.4rem);margin:0 0 6px;text-align:center;color:var(--hot)}
+.sub{text-align:center;margin:0 0 22px;opacity:.8}
+.card{background:var(--card);backdrop-filter:blur(6px);border-radius:28px;padding:20px;border:3px solid #fff;box-shadow:0 12px 30px #ff8fb833}
+#fx{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:1}
+.fl{position:absolute;bottom:-40px;animation:up linear forwards;opacity:.8}
+@keyframes up{to{transform:translateY(-115vh) rotate(25deg);opacity:0}}
+/* intro */
+#intro{position:fixed;inset:0;z-index:50;display:grid;place-items:center;text-align:center;padding:24px;background:linear-gradient(160deg,#ffd0e5,#e6d8ff);transition:opacity .8s,visibility .8s}
+#intro.out{opacity:0;visibility:hidden}
+#intro .big{font-size:5rem;animation:bob 2s ease-in-out infinite;display:block}
+#intro h1{font-family:Caveat,cursive;font-size:clamp(2.2rem,10vw,3.4rem);margin:8px 0;color:var(--hot);line-height:1.05}
+#intro p{margin:0 0 22px}
+@keyframes bob{50%{transform:translateY(-12px) rotate(4deg)}}
+/* nav */
+nav{position:fixed;left:50%;transform:translateX(-50%);bottom:var(--bt);z-index:20;display:flex;gap:4px;background:#ffffffe6;backdrop-filter:blur(10px);padding:6px;border-radius:99px;box-shadow:0 8px 24px #ff5c9d44;max-width:calc(100vw - 16px);overflow-x:auto;scrollbar-width:none}
+nav a{display:flex;flex-direction:column;align-items:center;text-decoration:none;color:var(--ink);font-size:.68rem;padding:6px 10px;border-radius:99px;white-space:nowrap;transition:.2s}
+nav a b{font-size:1.2rem;font-weight:400}
+nav a.on{background:var(--pink);color:#fff}
+@media(min-width:700px){nav{bottom:auto;top:14px;padding:6px 10px}nav a{flex-direction:row;gap:6px;font-size:.9rem}body{padding-bottom:0}}
+#music{position:fixed;right:12px;top:12px;z-index:21;width:44px;height:44px;border-radius:50%;background:#fff;box-shadow:0 4px 0 #ffc2da;font-size:1.3rem;display:none}
+#music.spin{animation:spin 4s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+#yt{position:fixed;width:1px;height:1px;opacity:0;pointer-events:none;left:-10px;top:-10px}
+/* home */
+#home{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding-top:60px}
+#home .tiny{font-family:Caveat,cursive;font-size:1.7rem;color:var(--lav);filter:saturate(1.6) brightness(.85);margin:0}
+#home h1{font-size:clamp(2.6rem,13vw,5.6rem);line-height:.98;margin:10px 0 14px;font-weight:700;letter-spacing:-.02em;background:linear-gradient(120deg,#ff5c9d,#b58cff);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 4px 0 #fff)}
+#home h3{font-family:Caveat,cursive;font-size:clamp(1.6rem,6vw,2.2rem);margin:0 0 16px;font-weight:700}
+#home .desc{max-width:480px;line-height:1.6;margin:0 auto 28px}
+.pop{opacity:0;animation:pop .8s cubic-bezier(.3,1.6,.5,1) forwards}
+@keyframes pop{from{opacity:0;transform:translateY(24px) scale(.9)}to{opacity:1;transform:none}}
+.deco{position:absolute;font-size:2rem;animation:bob 3s ease-in-out infinite}
+.sp{animation:tw 1.6s ease-in-out infinite}
+@keyframes tw{50%{transform:scale(.4) rotate(40deg);opacity:.3}}
+/* arcade */
+.tabs{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:16px}
+.tab{background:#fff;padding:9px 14px;border-radius:99px;font-size:.9rem}
+.tab.on{background:var(--hot);color:#fff}
+.game{display:none;text-align:center}.game.on{display:block}
+.hud{display:flex;justify-content:space-around;margin-bottom:10px;font-weight:600}
+#catchArea{position:relative;height:320px;border-radius:22px;background:linear-gradient(#fff,#ffeaf3);overflow:hidden;touch-action:none}
+#basket{position:absolute;bottom:6px;left:50%;font-size:2.6rem;transform:translateX(-50%)}
+.fall{position:absolute;top:-30px;font-size:1.8rem;transform:translateX(-50%)}
+#memGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.mc{aspect-ratio:1;border-radius:18px;background:var(--pink);font-size:2rem;display:grid;place-items:center;color:transparent;transition:.3s}
+.mc.up{background:#fff;color:inherit;transform:rotateY(360deg)}.mc.done{background:#ffd6e8;color:inherit}
+#bowGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;max-width:320px;margin:auto}
+.hole{aspect-ratio:1;border-radius:50%;background:#ffd6e8;font-size:2.4rem;display:grid;place-items:center;box-shadow:inset 0 6px 0 #ffb5d2}
+.msg{min-height:1.5em;margin:12px 0;font-weight:600;color:var(--hot)}
+/* facts */
+#factBox{font-size:1.25rem;line-height:1.5;text-align:center;min-height:130px;display:grid;place-items:center}
+/* cake */
+#cakeWrap{text-align:center}
+.cake{position:relative;width:230px;margin:50px auto 18px}
+.tier{margin:auto;border-radius:18px 18px 8px 8px;box-shadow:inset 0 -8px 0 #0001}
+.t1{width:130px;height:56px;background:#ffb3d1}.t2{width:200px;height:70px;background:#ff8fb8;border-radius:8px 8px 22px 22px}
+.t1:before,.t2:before{content:"";display:block;height:14px;background:radial-gradient(circle at 10px 0,#fff 9px,transparent 10px) 0 0/22px 14px;border-radius:18px 18px 0 0}
+.plate{width:240px;height:14px;background:#fff;border-radius:99px;margin:-2px auto 0;box-shadow:0 5px 0 #ffd0e5}
+.candles{position:absolute;top:-44px;left:0;right:0;display:flex;justify-content:center;gap:26px}
+.cd{width:12px;height:44px;background:repeating-linear-gradient(#fff 0 8px,#b58cff 8px 16px);border-radius:4px;position:relative;cursor:pointer}
+.cd:after{content:"";position:absolute;top:-22px;left:-2px;width:16px;height:22px;background:radial-gradient(#fff6a0,#ffb347 60%,transparent 70%);border-radius:50% 50% 50% 50%/60% 60% 40% 40%;transform-origin:bottom;opacity:0;transform:scale(.2);transition:.3s}
+.cd.lit:after{opacity:1;transform:scale(1);animation:fl .4s ease-in-out infinite alternate}
+@keyframes fl{to{transform:scale(1.1,.92) rotate(4deg)}}
+.cf{position:fixed;top:-20px;z-index:60;pointer-events:none;animation:dn 2.6s linear forwards}
+@keyframes dn{to{transform:translateY(110vh) rotate(540deg)}}
+/* letter */
+#env{font-size:6rem;cursor:pointer;display:block;margin:0 auto;background:none;transition:transform .2s}
+#env.shake{animation:sh .4s}
+@keyframes sh{25%{transform:rotate(-8deg)}75%{transform:rotate(8deg)}}
+#letter{display:none;margin-top:12px;line-height:1.75;font-size:1.05rem;white-space:pre-line}
+#letter.on{display:block;animation:pop .9s forwards}
+#letter .hd{font-family:Caveat,cursive;font-size:2rem;color:var(--hot)}
+footer{text-align:center;padding:30px 10px 10px;opacity:.7}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01s!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<div id="fx"></div>
+<div id="yt"></div>
+<button id="music" aria-label="Toggle music">🎵</button>
+
+<div id="intro">
+  <div>
+    <span class="big">🎀</span>
+    <h1>psst... someone made<br>something for you ♡</h1>
+    <p>(it's a little birthday world, just for Tote)</p>
+    <button class="btn" id="openBtn">open it ♡</button>
+  </div>
+</div>
+
+<nav id="nav">
+  <a href="#home" class="on"><b>🏠</b>Home</a>
+  <a href="#arcade"><b>🎮</b>Little Arcade</a>
+  <a href="#facts"><b>✨</b>Random Facts</a>
+  <a href="#cake"><b>🎂</b>Birthday Cake</a>
+  <a href="#secret"><b>💌</b>Secret Letter</a>
+</nav>
+
+<main>
+<section id="home">
+  <span class="deco" style="top:90px;left:8%">🎀</span>
+  <span class="deco" style="top:140px;right:9%;animation-delay:.6s">🧸</span>
+  <span class="deco sp" style="top:230px;left:14%">✨</span>
+  <span class="deco sp" style="bottom:130px;right:12%;animation-delay:.5s">⭐</span>
+  <span class="deco" style="bottom:90px;left:10%;animation-delay:1s">🌸</span>
+  <p class="tiny pop" style="animation-delay:.2s">today is literally YOUR dayyy ♡</p>
+  <h1 class="pop" style="animation-delay:.5s">HAPPY BIRTHDAY TO MY FAVORITE HUMAN.</h1>
+  <h3 class="pop" style="animation-delay:.9s">the cutest girl in the whole universe, my tote &lt;3</h3>
+  <p class="desc pop" style="animation-delay:1.3s">i hope today makes you feel even a little bit as special as you make me feel every single day. you deserve all the love, all the happiness, and literally everything good in this world.</p>
+  <button class="btn pop" id="goBtn" style="animation-delay:1.7s">okayyy let's gooo! ♡</button>
+</section>
+
+<section id="arcade">
+  <h2>Little Arcade 🎮</h2>
+  <p class="sub">three tiny games, made with love. high scores = bragging rights.</p>
+  <div class="card">
+    <div class="tabs">
+      <button class="tab on" data-g="g1">💗 Catch the Hearts</button>
+      <button class="tab" data-g="g2">🧸 Cutie Match</button>
+      <button class="tab" data-g="g3">🎀 Bow Pop</button>
+    </div>
+    <div class="game on" id="g1">
+      <div class="hud"><span>Score: <b id="cS">0</b></span><span>Time: <b id="cT">20</b></span><span>Best: <b id="cB">0</b></span></div>
+      <div id="catchArea"><div id="basket">🧺</div></div>
+      <p class="msg" id="cM">drag to move the basket. hearts = 1, stars = 3!</p>
+      <button class="btn sm" id="cGo">start ♡</button>
+    </div>
+    <div class="game" id="g2">
+      <div class="hud"><span>Moves: <b id="mM">0</b></span><span>Best: <b id="mB">-</b></span></div>
+      <div id="memGrid"></div>
+      <p class="msg" id="mMsg">find all the matching pairs!</p>
+      <button class="btn sm" id="mGo">shuffle ♡</button>
+    </div>
+    <div class="game" id="g3">
+      <div class="hud"><span>Score: <b id="bS">0</b></span><span>Time: <b id="bT">15</b></span><span>Best: <b id="bB">0</b></span></div>
+      <div id="bowGrid"></div>
+      <p class="msg" id="bM">tap every bow before it hides!</p>
+      <button class="btn sm" id="bGo">start ♡</button>
+    </div>
+  </div>
+</section>
+
+<section id="facts">
+  <h2>Random Facts About Tote ✨</h2>
+  <p class="sub">100% scientifically proven (by me)</p>
+  <div class="card">
+    <div id="factBox"></div>
+    <div style="text-align:center;margin-top:14px"><button class="btn" id="factBtn">another one! ♡</button></div>
+  </div>
+</section>
+
+<section id="cake" >
+  <h2>Birthday Cake 🎂</h2>
+  <p class="sub">tap each candle to light it, make a wish, then blow them out</p>
+  <div class="card" id="cakeWrap">
+    <div class="cake">
+      <div class="candles" id="candles"><div class="cd"></div><div class="cd"></div><div class="cd"></div><div class="cd"></div><div class="cd"></div></div>
+      <div class="tier t1"></div><div class="tier t2"></div><div class="plate"></div>
+    </div>
+    <p class="msg" id="cakeMsg">light all 5 candles ♡</p>
+    <button class="btn" id="blowBtn" disabled style="opacity:.5">blow them out 💨</button>
+  </div>
+</section>
+
+<section id="secret">
+  <h2>Secret Letter 💌</h2>
+  <p class="sub" id="envHint">psst... this one unlocks after you blow out your candles</p>
+  <div class="card">
+    <button id="env" aria-label="Open the letter">💌</button>
+    <div id="letter">
+<span class="hd">Dear Tote,</span>
+
+Happy birthday, my love. I tried writing this like fifty times and every version sounded too small, because there's no way to fit how much you mean to me into a few sentences. But I'm going to try anyway.
+
+You make ordinary days feel like my favorite ones. Your laugh is my favorite sound. Your smile can fix my whole mood. And somehow just talking to you makes the world feel softer.
+
+Thank you for being you. For being so kind, so funny, so cute it's actually unfair. Thank you for choosing me, for loving me, and for letting me be a part of your world.
+
+I hope this year gives you everything you've been dreaming of. And I hope I get to be there for all of it, cheering the loudest, holding your hand, being your biggest fan.
+
+I love you so much, Tote. Today, tomorrow, and for every birthday after this one.
+
+Forever yours,
+<span class="hd">Your boyfriend ♡</span>
+P.S. you're the best thing that ever happened to me. no take-backs. 🎀
+    </div>
+  </div>
+  <footer>made with so much love, just for you ♡</footer>
+</section>
+</main>
+
+<script>
+/* ====== CONFIG (edit me!) ====== */
+const YT_ID = "";      // <- paste the YouTube video ID here (the part after v= in the link)
+const YT_START = 65;   // 01:05
+const FACTS = [
+  "Tote's smile has been scientifically proven to fix bad days. (Source: me.)",
+  "Tote is the only person who can make me smile at 3am over a random message.",
+  "If cuteness had a world record, Tote would hold it. Undefeated.",
+  "Tote has a laugh that makes everyone around her laugh too. It's contagious. Dangerous, even.",
+  "Tote is the main character, and I'm just really lucky to be in her story.",
+  "Fun fact: I think about Tote more than I think about food. And I really like food.",
+  "Tote's hugs are officially the best place on Earth.",
+  "Tote can make even the most boring day feel like a movie scene.",
+  "Tote is 100% cuter in real life than any filter could ever pretend to be.",
+  "Whatever Tote is doing right now, she's doing it adorably."
+];
+const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+const LS = (k, v) => { try { if (v === undefined) return +localStorage.getItem(k) || 0; localStorage.setItem(k, v); } catch (e) { return 0; } };
+
+/* ====== floating hearts & confetti ====== */
+const fx = $('#fx');
+setInterval(() => {
+  const s = document.createElement('span'); s.className = 'fl';
+  s.textContent = ['💗','💖','✨','💕','🎀','⭐'][Math.random() * 6 | 0];
+  s.style.left = Math.random() * 100 + 'vw'; s.style.fontSize = 12 + Math.random() * 18 + 'px';
+  s.style.animationDuration = 7 + Math.random() * 6 + 's'; fx.appendChild(s);
+  setTimeout(() => s.remove(), 14000);
+}, 700);
+function confetti(n = 40) {
+  for (let i = 0; i < n; i++) {
+    const c = document.createElement('span'); c.className = 'cf';
+    c.textContent = ['💗','🎀','✨','🌸','⭐','💖'][i % 6]; c.style.left = Math.random() * 100 + 'vw';
+    c.style.fontSize = 16 + Math.random() * 14 + 'px'; c.style.animationDelay = Math.random() * .8 + 's';
+    document.body.appendChild(c); setTimeout(() => c.remove(), 3600);
+  }
+}
+
+/* ====== music (YouTube, starts at 01:05) ====== */
+let player, ready = false, playing = false;
+function loadYT() {
+  if (!YT_ID) return;
+  const t = document.createElement('script'); t.src = 'https://www.youtube.com/iframe_api'; document.head.appendChild(t);
+  $('#music').style.display = 'block';
+}
+window.onYouTubeIframeAPIReady = () => {
+  player = new YT.Player('yt', {
+    videoId: YT_ID, playerVars: { start: YT_START, playsinline: 1, controls: 0 },
+    events: {
+      onReady: () => { ready = true; if (playing) play(); },
+      onStateChange: e => { if (e.data === 0) { player.seekTo(YT_START, true); player.playVideo(); } }
+    }
+  });
+};
+function play() { if (ready) { player.seekTo(YT_START, true); player.playVideo(); } playing = true; $('#music').classList.add('spin'); }
+function pause() { if (ready) player.pauseVideo(); playing = false; $('#music').classList.remove('spin'); }
+$('#music').onclick = () => { if (playing) pause(); else { playing = true; ready && player.playVideo(); $('#music').classList.add('spin'); } };
+loadYT();
+
+/* ====== intro ====== */
+$('#openBtn').onclick = () => { $('#intro').classList.add('out'); if (YT_ID) play(); confetti(25); };
+$('#goBtn').onclick = () => $('#arcade').scrollIntoView({ behavior: 'smooth' });
+
+/* ====== nav highlight ====== */
+const io = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting) $$('#nav a').forEach(a => a.classList.toggle('on', a.getAttribute('href') === '#' + e.target.id));
+}), { threshold: .45 });
+$$('section').forEach(s => io.observe(s));
+
+/* ====== arcade tabs ====== */
+$$('.tab').forEach(t => t.onclick = () => {
+  $$('.tab').forEach(x => x.classList.toggle('on', x === t));
+  $$('.game').forEach(g => g.classList.toggle('on', g.id === t.dataset.g));
+});
+
+/* ====== game 1: catch the hearts ====== */
+(() => {
+  const a = $('#catchArea'), b = $('#basket'); let run = false, bx = a.clientWidth / 2;
+  $('#cB').textContent = LS('c');
+  const move = e => { const r = a.getBoundingClientRect(); bx = Math.max(24, Math.min(r.width - 24, e.clientX - r.left)); b.style.left = bx + 'px'; };
+  a.onpointermove = move; a.onpointerdown = move;
+  $('#cGo').onclick = () => {
+    if (run) return; run = true; let score = 0, time = 20, items = [], last = 0, raf;
+    $('#cS').textContent = 0; $('#cT').textContent = time; $('#cM').textContent = 'go go go!!';
+    const tm = setInterval(() => { $('#cT').textContent = --time; if (time <= 0) end(); }, 1000);
+    function end() {
+      run = false; clearInterval(tm); cancelAnimationFrame(raf); items.forEach(i => i.el.remove()); items = [];
+      const best = Math.max(score, LS('c')); LS('c', best); $('#cB').textContent = best;
+      $('#cM').textContent = score >= best && score > 0 ? `new high score: ${score}! you're so good ♡` : `you caught ${score} cuties ♡`;
+      if (score > 10) confetti(20);
+    }
+    function loop(ts) {
+      if (ts - last > 550) { last = ts; const star = Math.random() < .15, el = document.createElement('span');
+        el.className = 'fall'; el.textContent = star ? '⭐' : '💗'; el.style.left = 8 + Math.random() * 84 + '%'; a.appendChild(el);
+        items.push({ el, y: -30, v: 2.2 + Math.random() * 2, pts: star ? 3 : 1, x: 0 }); }
+      const h = a.clientHeight, w = a.clientWidth;
+      items = items.filter(i => {
+        i.y += i.v; i.el.style.top = i.y + 'px';
+        const ix = parseFloat(i.el.style.left) / 100 * w;
+        if (i.y > h - 50 && i.y < h - 5 && Math.abs(ix - bx) < 38) { score += i.pts; $('#cS').textContent = score; i.el.remove(); return false; }
+        if (i.y > h) { i.el.remove(); return false; } return true;
+      });
+      if (run) raf = requestAnimationFrame(loop);
+    }
+    raf = requestAnimationFrame(loop);
+  };
+})();
+
+/* ====== game 2: cutie match ====== */
+(() => {
+  const g = $('#memGrid'); let first = null, lock = false, moves = 0, found = 0;
+  $('#mB').textContent = LS('m') || '-';
+  function setup() {
+    g.innerHTML = ''; first = null; lock = false; moves = 0; found = 0; $('#mM').textContent = 0; $('#mMsg').textContent = 'find all the matching pairs!';
+    const em = ['🧸','🎀','🍓','🌸','💗','🐰']; const deck = [...em, ...em].sort(() => Math.random() - .5);
+    deck.forEach(e => { const c = document.createElement('button'); c.className = 'mc'; c.textContent = e; c.dataset.e = e; c.onclick = () => flip(c); g.appendChild(c); });
+  }
+  function flip(c) {
+    if (lock || c.classList.contains('up') || c.classList.contains('done')) return;
+    c.classList.add('up');
+    if (!first) { first = c; return; }
+    $('#mM').textContent = ++moves;
+    if (first.dataset.e === c.dataset.e) {
+      first.classList.add('done'); c.classList.add('done'); first = null;
+      if (++found === 6) { const best = LS('m') ? Math.min(LS('m'), moves) : moves; LS('m', best); $('#mB').textContent = best;
+        $('#mMsg').textContent = `you did it in ${moves} moves! so smart ♡`; confetti(30); }
+    } else { lock = true; setTimeout(() => { first.classList.remove('up'); c.classList.remove('up'); first = null; lock = false; }, 700); }
+  }
+  $('#mGo').onclick = setup; setup();
+})();
+
+/* ====== game 3: bow pop ====== */
+(() => {
+  const g = $('#bowGrid'), holes = []; let run = false;
+  for (let i = 0; i < 9; i++) { const h = document.createElement('button'); h.className = 'hole'; g.appendChild(h); holes.push(h); }
+  $('#bB').textContent = LS('b');
+  $('#bGo').onclick = () => {
+    if (run) return; run = true; let score = 0, time = 15, cur = -1;
+    $('#bS').textContent = 0; $('#bT').textContent = time; $('#bM').textContent = 'pop them all!';
+    const show = () => { if (cur >= 0) holes[cur].textContent = ''; cur = Math.random() * 9 | 0; holes[cur].textContent = '🎀'; };
+    holes.forEach((h, i) => h.onclick = () => { if (run && i === cur) { score++; $('#bS').textContent = score; h.textContent = '💥'; cur = -1; setTimeout(() => h.textContent = '', 150); } });
+    show(); const sh = setInterval(() => run && show(), 750);
+    const tm = setInterval(() => { $('#bT').textContent = --time; if (time <= 0) { run = false; clearInterval(sh); clearInterval(tm); holes.forEach(h => h.textContent = '');
+      const best = Math.max(score, LS('b')); LS('b', best); $('#bB').textContent = best; $('#bM').textContent = `${score} bows popped! cutie ♡`; if (score > 8) confetti(20); } }, 1000);
+  };
+})();
+
+/* ====== random facts ====== */
+(() => {
+  let last = -1; const box = $('#factBox');
+  const next = () => { let i; do { i = Math.random() * FACTS.length | 0; } while (i === last); last = i; box.textContent = '💗 ' + FACTS[i]; box.animate([{ opacity: 0, transform: 'scale(.9)' }, { opacity: 1, transform: 'none' }], 400); };
+  $('#factBtn').onclick = next; next();
+})();
+
+/* ====== cake & letter ====== */
+let blown = false;
+(() => {
+  const cds = $$('.cd'), btn = $('#blowBtn'), msg = $('#cakeMsg');
+  cds.forEach(c => c.onclick = () => {
+    if (blown) return; c.classList.add('lit');
+    const n = cds.filter(x => x.classList.contains('lit')).length;
+    if (n === cds.length) { msg.textContent = 'now make a wish... 🤫'; btn.disabled = false; btn.style.opacity = 1; } else msg.textContent = `${n}/${cds.length} lit ♡`;
+  });
+  btn.onclick = () => {
+    cds.forEach(c => c.classList.remove('lit')); blown = true; btn.disabled = true; btn.style.opacity = .5;
+    msg.textContent = 'wish made!! it WILL come true. ♡'; confetti(60);
+    $('#envHint').textContent = 'your secret letter is unlocked ♡ tap the envelope'; $('#env').textContent = '💌';
+  };
+  const env = $('#env');
+  env.onclick = () => {
+    if (!blown) { env.classList.remove('shake'); void env.offsetWidth; env.classList.add('shake'); $('#envHint').textContent = 'not yet! blow out your cake candles first 🎂'; return; }
+    env.style.display = 'none'; $('#letter').classList.add('on'); confetti(35); $('#letter').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+})();
+</script>
+</body>
+</html>
